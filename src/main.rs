@@ -93,4 +93,11 @@ mod converter_tests {
         let hexadecimal = dec_to_hex(decimal);
         assert_eq!(hexadecimal, "E5");
     }
+    #[test] 
+    fn test_convert_octal372_to_hex_fa () {
+        let octal = 372;
+        let decimal = octal_to_dec(octal);
+        let hexadecimal = dec_to_hex(decimal);
+        assert_eq!(hexadecimal, "FA");
+    }
 }
