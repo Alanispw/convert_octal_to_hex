@@ -28,4 +28,10 @@ mod converter_tests {
         let decimal = octal_to_dec(octal);
         assert_eq!(decimal, 1);
     }
+    #[test] 
+    fn test_convert_octal10_to_dec8  () {
+        let octal = 10;
+        let decimal = octal_to_dec(octal);
+        assert_eq!(decimal, 8);
+    }
 }

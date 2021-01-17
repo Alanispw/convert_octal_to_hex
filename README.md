@@ -12,7 +12,7 @@ Cri-2-2: Debe poder retornar tanto numeros como letras base 16
 
 Escenarios de prueba 
 
-[] Sce-1-1-1: test_convert_octal1_to_dec1 
+[DONE] Sce-1-1-1: test_convert_octal1_to_dec1 
 [] Sce-1-1-2: test_convert_octal10_to_dec8 
 [] Sce-1-2-1: test_convert_octal345_to_dec229
 [] Sce-2-1-1: test_convert_octal345_to_hex_e5
