@@ -7,6 +7,7 @@ pub fn octal_to_dec(mut _octal: i32) -> i32 {
     let mut rem;
     let mut place = 0; 
 
+    //Convert octal to decimal 
     while _octal != 0 {
         rem = _octal % 10;
         _decimal = _decimal + rem * oct.pow(place);
@@ -21,8 +22,9 @@ pub fn dec_to_hex(mut _decimal: i32) -> String {
     let dec: i32 = 16;
     let mut i = 1;
     let mut dec_search: i32 = _decimal;
-    let mut _hex = String::new();
+    let mut _hexadecimal = String::new();
     
+    //Convert decimal to hexadecimal
     while 1 > 0 {
         if _decimal >= dec.pow(i) {
             j = j + 1; 
@@ -34,10 +36,10 @@ pub fn dec_to_hex(mut _decimal: i32) -> String {
     }
 
     for n in 0..j {
-        _hex.push_str(&search_hex(dec_search / dec.pow(j - 1 - n )));
+        _hexadecimal.push_str(&search_hex(dec_search / dec.pow(j - 1 - n )));
         dec_search = dec_search % dec.pow(j - 1 - n);
     }
-    return _hex;
+    return _hexadecimal;
 }
 
 fn search_hex(num: i32) -> String {
@@ -69,35 +71,42 @@ mod converter_tests {
     use super::*;
 
     #[test] 
-    fn test_convert_octal1_to_dec1 () {
+    fn test1_convert_octal1_to_dec1 () {
         let octal = 1;
         let decimal = octal_to_dec(octal);
         assert_eq!(decimal, 1);
     }
     #[test] 
-    fn test_convert_octal10_to_dec8  () {
+    fn test2_convert_octal10_to_dec8  () {
         let octal = 10;
         let decimal = octal_to_dec(octal);
         assert_eq!(decimal, 8);
     }
     #[test] 
-    fn test_convert_octal345_to_dec229 () {
+    fn test3_convert_octal345_to_dec229 () {
         let octal = 345;
         let decimal = octal_to_dec(octal);
         assert_eq!(decimal, 229);
     }
     #[test] 
-    fn test_convert_octal345_to_hex_e5 () {
+    fn test4_convert_octal345_to_hex_e5 () {
         let octal = 345;
         let decimal = octal_to_dec(octal);
         let hexadecimal = dec_to_hex(decimal);
         assert_eq!(hexadecimal, "E5");
     }
     #[test] 
-    fn test_convert_octal372_to_hex_fa () {
+    fn test5_convert_octal372_to_hex_fa () {
         let octal = 372;
         let decimal = octal_to_dec(octal);
         let hexadecimal = dec_to_hex(decimal);
         assert_eq!(hexadecimal, "FA");
+    }
+    #[test] 
+    fn test6_convert_octal1266_to_hex_2b6 () {
+        let octal = 1266;
+        let decimal = octal_to_dec(octal);
+        let hexadecimal = dec_to_hex(decimal);
+        assert_eq!(hexadecimal, "2B6");
     }
 }

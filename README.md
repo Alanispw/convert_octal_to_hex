@@ -16,8 +16,8 @@ Escenarios de prueba
 [DONE] Sce-1-1-2: test_convert_octal10_to_dec8 
 [DONE] Sce-1-2-1: test_convert_octal345_to_dec229
 [DONE] Sce-2-1-1: test_convert_octal345_to_hex_e5
-[] Sce-2-1-2: test_convert_octal372_to_hexFA
-[] Sce-2-1-3: test_convert_octal1266_to_hex2B6
+[DONE] Sce-2-1-2: test_convert_octal372_to_hexFA
+[DONE] Sce-2-1-3: test_convert_octal1266_to_hex2B6
 
 
 
