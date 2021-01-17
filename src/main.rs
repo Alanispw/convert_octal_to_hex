@@ -42,6 +42,7 @@ pub fn dec_to_hex(mut _decimal: i32) -> String {
     return _hexadecimal;
 }
 
+//Compare numbers 
 fn search_hex(num: i32) -> String {
     match num {
         num if num == 0 => "0".to_string(),
